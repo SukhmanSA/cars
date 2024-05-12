@@ -90,9 +90,7 @@
   .navbar-link:hover {
     color: #111;
   }
-  /* End of Navbar */
-  
-  /* Common Section Styles */
+
   .wrapper {
     width: 100%;
     perspective: 50rem;
@@ -145,10 +143,58 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    height: 145vh;
   }
   
+.p2{
+  position: absolute;
+  font-size: 2rem;
+  font-family: sans-serif;
+  padding: 2rem;
+  padding-top: 5rem;
+  margin-right: 1rem;
+  opacity: 0;
+  border-style:groove;
+  text-shadow: 0.1rem 0.1rem 0.2rem #545454;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.3rem #5a76a2;
+  background-image: linear-gradient(to right top,#1952af,#ffffff);
+  height: 27rem;
+  transition: opacity 0.5s;
+}
+
+.cards-wrapper{
+  flex-wrap: wrap;
+  width: 130%;
+  height: 115vh;
+  transform: translate(-23rem,-5rem);
+}
+
+.c2{
+  transform: translateY(3rem);
+}
+
+.c2 .card-img{
+  height: 28rem;
+}
+
+.p1-h{
+  position: absolute;
+  z-index: 2000;
+  opacity: 0;
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-left: 11rem;
+  font-weight: 100;
+  font-family: serif;
+  transition: opacity 0.5s;
+}
+
+.card:hover .p1-h{
+    opacity: 1;
+}
+
   .card {
-    width: 50rem;
+    width: 43rem;
     margin: 0 3rem;
     background-color: #fff;
     padding: 1rem;
@@ -170,18 +216,29 @@
     top: 2rem;
     left: 2rem;
     z-index: 10;
+    transition: opacity 0.4s;
   }
   
   .card-img {
     width: 100%;
     opacity: 0.8;
-    transition: opacity 0.5s;
+    transition: opacity 0.8s;
   }
   
-  .card:hover .card-img {
+.card:hover .card-img {
+    opacity: 0;
+
+  }
+ 
+ .card:hover .car-name{
+  opacity: 0;
+  }
+
+.card:hover .p2{
     opacity: 1;
   }
   
+
   .car-price {
     font-size: 1.8rem;
     color: #777;
@@ -230,6 +287,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 130vh;
   }
   
   .gallery {
